@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CharacterPart" load_steps=3 format=3 uid="uid://vcu3mefa55qs"]
+
+[ext_resource type="PackedScene" uid="uid://cbtggxabm1us8" path="res://models/character/hair_02.gltf" id="1_ps4wd"]
+[ext_resource type="Script" path="res://scripts/character_part.gd" id="2_110dh"]
+
+[resource]
+script = ExtResource("2_110dh")
+name = "Bob"
+part_model = ExtResource("1_ps4wd")

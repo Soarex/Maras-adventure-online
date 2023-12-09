@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CharacterPart" load_steps=3 format=3 uid="uid://b7w2gnda7nyg7"]
+
+[ext_resource type="PackedScene" uid="uid://c1uojvj4o87ml" path="res://models/character/head_01.gltf" id="1_icj3u"]
+[ext_resource type="Script" path="res://scripts/character_part.gd" id="1_x84wg"]
+
+[resource]
+script = ExtResource("1_x84wg")
+name = "Basic head"
+part_model = ExtResource("1_icj3u")

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CharacterCustomizationData" load_steps=11 format=3 uid="uid://b405ue2ah7hku"]
+
+[ext_resource type="Script" path="res://scripts/character_customization_data.gd" id="1_4dyg3"]
+[ext_resource type="Resource" uid="uid://dwavrqksj2p42" path="res://resources/character_customization/hairs/hair_01.tres" id="1_ph361"]
+[ext_resource type="Resource" uid="uid://bh2vyo540tog8" path="res://resources/character_customization/bodies/body_01.tres" id="1_u4o6b"]
+[ext_resource type="Resource" uid="uid://bkmlluk6pctej" path="res://resources/character_customization/feet/foot_01.tres" id="2_w1bp7"]
+[ext_resource type="Resource" uid="uid://vcu3mefa55qs" path="res://resources/character_customization/hairs/hair_02.tres" id="4_wfooa"]
+[ext_resource type="Resource" uid="uid://dj5ihdmnv2my8" path="res://resources/character_customization/hairs/hair_03.tres" id="5_h3wv8"]
+[ext_resource type="Resource" uid="uid://cphuvtnv2cw57" path="res://resources/character_customization/hairs/hair_04.tres" id="6_8ww4p"]
+[ext_resource type="Resource" uid="uid://7wajccx3pq8o" path="res://resources/character_customization/hairs/hair_05.tres" id="7_xv7i4"]
+[ext_resource type="Resource" uid="uid://na7ouscn6ym6" path="res://resources/character_customization/hands/hand_01.tres" id="8_o0ixy"]
+[ext_resource type="Resource" uid="uid://b7w2gnda7nyg7" path="res://resources/character_customization/heads/head_01.tres" id="9_ss1lg"]
+
+[resource]
+script = ExtResource("1_4dyg3")
+hairs = Array[Resource("res://scripts/character_part.gd")]([ExtResource("1_ph361"), ExtResource("4_wfooa"), ExtResource("5_h3wv8"), ExtResource("6_8ww4p"), ExtResource("7_xv7i4")])
+heads = Array[Resource("res://scripts/character_part.gd")]([ExtResource("9_ss1lg")])
+bodies = [ExtResource("1_u4o6b")]
+hands = Array[Resource("res://scripts/character_part.gd")]([ExtResource("8_o0ixy")])
+feet = Array[Resource("res://scripts/character_part.gd")]([ExtResource("2_w1bp7")])

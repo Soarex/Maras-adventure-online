@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CharacterPart" load_steps=3 format=3 uid="uid://na7ouscn6ym6"]
+
+[ext_resource type="PackedScene" uid="uid://dppq0g48atmab" path="res://models/character/hand_01.gltf" id="1_sgguf"]
+[ext_resource type="Script" path="res://scripts/character_part.gd" id="2_w7506"]
+
+[resource]
+script = ExtResource("2_w7506")
+name = "Basic hand"
+part_model = ExtResource("1_sgguf")

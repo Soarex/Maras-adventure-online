@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CharacterPart" load_steps=3 format=3 uid="uid://cphuvtnv2cw57"]
+
+[ext_resource type="PackedScene" uid="uid://c6d3xslhdase1" path="res://models/character/hair_04.gltf" id="1_iymjx"]
+[ext_resource type="Script" path="res://scripts/character_part.gd" id="2_x5kw7"]
+
+[resource]
+script = ExtResource("2_x5kw7")
+name = "Short hair"
+part_model = ExtResource("1_iymjx")

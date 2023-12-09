@@ -1,0 +1,112 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhrd8kktpsqaw"]
+
+[ext_resource type="Theme" uid="uid://bbi2cgvrophxf" path="res://resources/ui_theme.tres" id="1_cp2k5"]
+[ext_resource type="Script" path="res://scenes/character_customization_screen.gd" id="1_mcbaj"]
+[ext_resource type="Resource" uid="uid://b405ue2ah7hku" path="res://resources/character_customization/character_customization_data.tres" id="2_uv4pq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2tk58"]
+bg_color = Color(0, 0, 0, 0.498039)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_mcbaj")
+character_customization_data = ExtResource("2_uv4pq")
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+split_offset = 230
+dragger_visibility = 2
+
+[node name="LeftPanel" type="Panel" parent="HSplitContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2tk58")
+
+[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/LeftPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+
+[node name="PartOptions" type="VBoxContainer" parent="HSplitContainer/LeftPanel/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("1_cp2k5")
+
+[node name="HairTitle" type="RichTextLabel" parent="HSplitContainer/LeftPanel/MarginContainer/PartOptions"]
+layout_mode = 2
+text = "Hair"
+fit_content = true
+
+[node name="HairOptionMargin" type="MarginContainer" parent="HSplitContainer/LeftPanel/MarginContainer/PartOptions"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+
+[node name="HairOptions" type="VBoxContainer" parent="HSplitContainer/LeftPanel/MarginContainer/PartOptions/HairOptionMargin"]
+layout_mode = 2
+
+[node name="HeadTitle" type="RichTextLabel" parent="HSplitContainer/LeftPanel/MarginContainer/PartOptions"]
+layout_mode = 2
+text = "Head"
+fit_content = true
+
+[node name="HeadOptionMargin" type="MarginContainer" parent="HSplitContainer/LeftPanel/MarginContainer/PartOptions"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+
+[node name="HeadOptions" type="VBoxContainer" parent="HSplitContainer/LeftPanel/MarginContainer/PartOptions/HeadOptionMargin"]
+layout_mode = 2
+
+[node name="BodyTitle" type="RichTextLabel" parent="HSplitContainer/LeftPanel/MarginContainer/PartOptions"]
+layout_mode = 2
+text = "Body"
+fit_content = true
+
+[node name="BodyOptionMargin" type="MarginContainer" parent="HSplitContainer/LeftPanel/MarginContainer/PartOptions"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+
+[node name="BodyOptions" type="VBoxContainer" parent="HSplitContainer/LeftPanel/MarginContainer/PartOptions/BodyOptionMargin"]
+layout_mode = 2
+
+[node name="HandsTitle" type="RichTextLabel" parent="HSplitContainer/LeftPanel/MarginContainer/PartOptions"]
+layout_mode = 2
+text = "Hand
+"
+fit_content = true
+
+[node name="HandOptionMargin" type="MarginContainer" parent="HSplitContainer/LeftPanel/MarginContainer/PartOptions"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+
+[node name="HandOptions" type="VBoxContainer" parent="HSplitContainer/LeftPanel/MarginContainer/PartOptions/HandOptionMargin"]
+layout_mode = 2
+
+[node name="FeetTitle" type="RichTextLabel" parent="HSplitContainer/LeftPanel/MarginContainer/PartOptions"]
+layout_mode = 2
+text = "Feet"
+fit_content = true
+
+[node name="FeetOptionMargin" type="MarginContainer" parent="HSplitContainer/LeftPanel/MarginContainer/PartOptions"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+
+[node name="FeetOptions" type="VBoxContainer" parent="HSplitContainer/LeftPanel/MarginContainer/PartOptions/FeetOptionMargin"]
+layout_mode = 2
+
+[node name="CharacterViewport" type="TextureRect" parent="HSplitContainer"]
+layout_mode = 2

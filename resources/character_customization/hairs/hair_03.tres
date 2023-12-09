@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CharacterPart" load_steps=3 format=3 uid="uid://dj5ihdmnv2my8"]
+
+[ext_resource type="PackedScene" uid="uid://313jdsluauoo" path="res://models/character/hair_03.gltf" id="1_ij8ya"]
+[ext_resource type="Script" path="res://scripts/character_part.gd" id="2_6mwvm"]
+
+[resource]
+script = ExtResource("2_6mwvm")
+name = "Ponytail"
+part_model = ExtResource("1_ij8ya")
