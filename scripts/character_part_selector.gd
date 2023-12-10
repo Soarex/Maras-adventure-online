@@ -1,6 +1,8 @@
 class_name CharacterPartSelector
 extends VBoxContainer
 
+signal part_selected
+
 @export var character_customization_data: CharacterCustomizationData
 
 @onready var hair_options_container: VBoxContainer = $HairOptionMargin/HairOptions
@@ -18,7 +20,7 @@ func _ready():
 		entry.mouse_filter = Control.MOUSE_FILTER_PASS
 		entry.gui_input.connect(func(event):
 			if(event is InputEventMouseButton && event.pressed && event.button_index == 1):
-				on_part_selected(hair))
+				on_part_selected(PartType.Hair, hair))
 		
 		hair_options_container.add_child(entry)
 		
@@ -29,7 +31,7 @@ func _ready():
 		entry.mouse_filter = Control.MOUSE_FILTER_PASS
 		entry.gui_input.connect(func(event):
 			if(event is InputEventMouseButton && event.pressed && event.button_index == 1):
-				on_part_selected(head))
+				on_part_selected(PartType.Head, head))
 		
 		head_options_container.add_child(entry)
 		
@@ -40,7 +42,7 @@ func _ready():
 		entry.mouse_filter = Control.MOUSE_FILTER_PASS
 		entry.gui_input.connect(func(event):
 			if(event is InputEventMouseButton && event.pressed && event.button_index == 1):
-				on_part_selected(body))
+				on_part_selected(PartType.Body, body))
 		
 		body_options_container.add_child(entry)
 		
@@ -51,7 +53,7 @@ func _ready():
 		entry.mouse_filter = Control.MOUSE_FILTER_PASS
 		entry.gui_input.connect(func(event):
 			if(event is InputEventMouseButton && event.pressed && event.button_index == 1):
-				on_part_selected(hand))
+				on_part_selected(PartType.Hand, hand))
 		
 		hand_options_container.add_child(entry)
 		
@@ -62,10 +64,20 @@ func _ready():
 		entry.mouse_filter = Control.MOUSE_FILTER_PASS
 		entry.gui_input.connect(func(event):
 			if(event is InputEventMouseButton && event.pressed && event.button_index == 1):
-				on_part_selected(foot))
+				on_part_selected(PartType.Foot, foot))
 		
 		foot_options_container.add_child(entry)
 
 
-func on_part_selected(part: CharacterPart) -> void:
-	print(part.name)
+func on_part_selected(type: PartType, part: CharacterPart) -> void:
+	part_selected.emit(type, part)
+
+
+enum PartType
+{
+	Hair,
+	Head,
+	Body,
+	Hand,
+	Foot
+}
