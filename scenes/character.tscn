@@ -139,3 +139,4 @@ script = ExtResource("8_u7vhn")
 script = ExtResource("9_0laet")
 
 [editable path="Character"]
+[editable path="Character/Armature/Skeleton3D/Hair/Transform/hair_01"]

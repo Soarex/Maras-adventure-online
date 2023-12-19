@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dt7i3l5ds8u6f"]
 
 [ext_resource type="PackedScene" uid="uid://cmsjltvqddcom" path="res://scenes/character.tscn" id="1_gw75u"]
-[ext_resource type="Material" uid="uid://dc5v1cwjmxbkp" path="res://resources/green_material.tres" id="2_7xc1l"]
+[ext_resource type="Material" uid="uid://dc5v1cwjmxbkp" path="res://resources/materials/green_material.tres" id="2_cu3lx"]
 [ext_resource type="Environment" uid="uid://cixr37jamchud" path="res://resources/environment.tres" id="2_joq3a"]
-[ext_resource type="Material" uid="uid://c0jahm8q1l0en" path="res://resources/red_material.tres" id="4_gn4s6"]
+[ext_resource type="Material" uid="uid://c0jahm8q1l0en" path="res://resources/materials/red_material.tres" id="4_xw3m8"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -19,7 +19,7 @@ size = Vector3(10.2238, 1.82529, 7.59118)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
 size = Vector3(38.8658, 1, 38.6965)
-material = ExtResource("2_7xc1l")
+material = ExtResource("2_cu3lx")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.66692, 3.45567, 16.7226)
@@ -40,19 +40,19 @@ use_collision = true
 [node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.73947, -13.5691)
 size = Vector3(7.04452, 6.30114, 8.08407)
-material = ExtResource("4_gn4s6")
+material = ExtResource("4_xw3m8")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.59106, -13.5691)
 operation = 2
 size = Vector3(6.61846, 5.98678, 7.83181)
-material = ExtResource("4_gn4s6")
+material = ExtResource("4_xw3m8")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.04413, -9.83876)
 operation = 2
 size = Vector3(2.71569, 3.27379, 1)
-material = ExtResource("4_gn4s6")
+material = ExtResource("4_xw3m8")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="CSGCombiner3D2"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 6.29661, -13.5209)

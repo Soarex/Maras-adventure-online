@@ -1,0 +1,111 @@
+[gd_resource type="VisualShader" load_steps=10 format=3 uid="uid://b2kmk2erok4wn"]
+
+[sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_mwfsv"]
+parameter_name = "secondary_color"
+default_value_enabled = true
+default_value = Color(4.33177e-07, 0.287811, 0.468453, 1)
+
+[sub_resource type="VisualShaderNodeMix" id="VisualShaderNodeMix_3xcom"]
+default_input_values = [0, Vector3(0, 0, 0), 1, Vector3(1, 1, 1), 2, Vector3(0.5, 0.5, 0.5)]
+op_type = 3
+
+[sub_resource type="VisualShaderNodeMix" id="VisualShaderNodeMix_8tb5g"]
+default_input_values = [0, Vector3(0, 0, 0), 1, Vector3(1, 1, 1), 2, Vector3(0.5, 0.5, 0.5)]
+op_type = 3
+
+[sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_xqmw1"]
+parameter_name = "main_texture"
+texture_type = 1
+color_default = 1
+texture_filter = 1
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_t6hpm"]
+source = 5
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_majjj"]
+source = 5
+
+[sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_2a8su"]
+parameter_name = "color_mask"
+texture_type = 1
+color_default = 1
+texture_filter = 1
+
+[sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_481ir"]
+parameter_name = "primary_color"
+default_value_enabled = true
+default_value = Color(0, 0.557333, 0.88, 1)
+
+[sub_resource type="VisualShaderNodeVectorDecompose" id="VisualShaderNodeVectorDecompose_cv1vu"]
+
+[resource]
+code = "shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_schlick_ggx;
+
+uniform sampler2D main_texture : source_color, hint_default_black, filter_nearest;
+uniform vec4 primary_color : source_color = vec4(0.000000, 0.557333, 0.880000, 1.000000);
+uniform sampler2D color_mask : source_color, hint_default_black, filter_nearest;
+uniform vec4 secondary_color : source_color = vec4(0.000000, 0.287811, 0.468453, 1.000000);
+
+
+
+void fragment() {
+	vec4 n_out3p0;
+// Texture2D:3
+	n_out3p0 = texture(main_texture, UV);
+
+
+// ColorParameter:7
+	vec4 n_out7p0 = primary_color;
+
+
+	vec4 n_out4p0;
+// Texture2D:4
+	n_out4p0 = texture(color_mask, UV);
+
+
+// VectorDecompose:9
+	float n_out9p0 = vec3(n_out4p0.xyz).x;
+	float n_out9p1 = vec3(n_out4p0.xyz).y;
+	float n_out9p2 = vec3(n_out4p0.xyz).z;
+
+
+// Mix:12
+	vec3 n_out12p0 = mix(vec3(n_out3p0.xyz), vec3(n_out7p0.xyz), vec3(n_out9p0));
+
+
+// ColorParameter:10
+	vec4 n_out10p0 = secondary_color;
+
+
+// Mix:13
+	vec3 n_out13p0 = mix(n_out12p0, vec3(n_out10p0.xyz), vec3(n_out9p1));
+
+
+// Output:0
+	ALBEDO = n_out13p0;
+
+
+}
+"
+graph_offset = Vector2(-516.109, 182.031)
+nodes/fragment/0/position = Vector2(760, 360)
+nodes/fragment/2/node = SubResource("VisualShaderNodeTexture2DParameter_xqmw1")
+nodes/fragment/2/position = Vector2(-720, 0)
+nodes/fragment/3/node = SubResource("VisualShaderNodeTexture_t6hpm")
+nodes/fragment/3/position = Vector2(-340, 140)
+nodes/fragment/4/node = SubResource("VisualShaderNodeTexture_majjj")
+nodes/fragment/4/position = Vector2(-540, 880)
+nodes/fragment/5/node = SubResource("VisualShaderNodeTexture2DParameter_2a8su")
+nodes/fragment/5/position = Vector2(-920, 880)
+nodes/fragment/7/node = SubResource("VisualShaderNodeColorParameter_481ir")
+nodes/fragment/7/position = Vector2(-340, 360)
+nodes/fragment/9/node = SubResource("VisualShaderNodeVectorDecompose_cv1vu")
+nodes/fragment/9/position = Vector2(-220, 880)
+nodes/fragment/10/node = SubResource("VisualShaderNodeColorParameter_mwfsv")
+nodes/fragment/10/position = Vector2(-340, 600)
+nodes/fragment/12/node = SubResource("VisualShaderNodeMix_3xcom")
+nodes/fragment/12/position = Vector2(20, 180)
+nodes/fragment/13/node = SubResource("VisualShaderNodeMix_8tb5g")
+nodes/fragment/13/position = Vector2(440, 200)
+nodes/fragment/connections = PackedInt32Array(2, 0, 3, 2, 5, 0, 4, 2, 4, 0, 9, 0, 3, 0, 12, 0, 7, 0, 12, 1, 9, 0, 12, 2, 13, 0, 0, 0, 9, 1, 13, 2, 12, 0, 13, 0, 10, 0, 13, 1)

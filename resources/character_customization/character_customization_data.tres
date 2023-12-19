@@ -15,6 +15,6 @@
 script = ExtResource("1_4dyg3")
 hairs = Array[Resource("res://scripts/character_part.gd")]([ExtResource("1_ph361"), ExtResource("4_wfooa"), ExtResource("5_h3wv8"), ExtResource("6_8ww4p"), ExtResource("7_xv7i4")])
 heads = Array[Resource("res://scripts/character_part.gd")]([ExtResource("9_ss1lg")])
-bodies = [ExtResource("1_u4o6b")]
+bodies = Array[Resource("res://scripts/character_part.gd")]([ExtResource("1_u4o6b")])
 hands = Array[Resource("res://scripts/character_part.gd")]([ExtResource("8_o0ixy")])
 feet = Array[Resource("res://scripts/character_part.gd")]([ExtResource("2_w1bp7")])

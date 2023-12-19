@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://ddqk5rjhsbihc"]
+
+[ext_resource type="Shader" uid="uid://b2kmk2erok4wn" path="res://resources/shaders/player_shader.tres" id="1_b0nlx"]
+[ext_resource type="Texture2D" uid="uid://bgqe1xod4nw78" path="res://resources/character_customization/heads/head_01_mask.png" id="2_gtwas"]
+[ext_resource type="Texture2D" uid="uid://c81ewltbqubrw" path="res://resources/character_customization/heads/head_01.png" id="3_gh4us"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_b0nlx")
+shader_parameter/primary_color = Color(0, 0.557333, 0.88, 1)
+shader_parameter/secondary_color = Color(0, 0.287811, 0.468453, 1)
+shader_parameter/main_text = ExtResource("3_gh4us")
+shader_parameter/color_mask = ExtResource("2_gtwas")
