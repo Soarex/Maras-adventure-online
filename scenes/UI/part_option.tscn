@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcn6c4rekhjgy"]
+
+[ext_resource type="Theme" uid="uid://bbi2cgvrophxf" path="res://resources/ui_theme.tres" id="1_of5jv"]
+[ext_resource type="Script" path="res://scripts/character_part_options.gd" id="2_js3r3"]
+
+[node name="Root" type="VBoxContainer"]
+theme = ExtResource("1_of5jv")
+script = ExtResource("2_js3r3")
+
+[node name="Title" type="RichTextLabel" parent="."]
+layout_mode = 2
+text = "Head"
+fit_content = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="PrimaryColor" type="ColorPickerButton" parent="HBoxContainer"]
+layout_mode = 2
+text = "1234567891"
+color = Color(1, 1, 1, 1)
+edit_alpha = false
+
+[node name="SecondaryColor" type="ColorPickerButton" parent="HBoxContainer"]
+layout_mode = 2
+text = "1234567891"
+color = Color(1, 1, 1, 1)
+edit_alpha = false
+
+[node name="OptionsMargin" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+
+[node name="Options" type="VBoxContainer" parent="OptionsMargin"]
+layout_mode = 2

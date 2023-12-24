@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CharacterPart" load_steps=3 format=3 uid="uid://bh2vyo540tog8"]
+
+[ext_resource type="PackedScene" uid="uid://c6557u3g3tni4" path="res://resources/character_customization/bodies/body_01/body_01.gltf" id="1_7l10g"]
+[ext_resource type="Script" path="res://scripts/character_part.gd" id="2_fenrw"]
+
+[resource]
+script = ExtResource("2_fenrw")
+name = "Corpo base"
+part_model = ExtResource("1_7l10g")
+has_primary_color = false
+primary_color = Color(1, 1, 1, 1)
+has_secondary_color = false
+secondary_color = Color(1, 1, 1, 1)

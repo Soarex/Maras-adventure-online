@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CharacterPart" load_steps=4 format=3 uid="uid://dwavrqksj2p42"]
+
+[ext_resource type="Material" uid="uid://dw8vi4725228q" path="res://resources/character_customization/hair/hair_01/hair_01_material.tres" id="1_8bthe"]
+[ext_resource type="PackedScene" uid="uid://b2b2ujij0gqg4" path="res://resources/character_customization/hair/hair_01/hair_01.gltf" id="1_rmh0c"]
+[ext_resource type="Script" path="res://scripts/character_part.gd" id="2_p78ki"]
+
+[resource]
+script = ExtResource("2_p78ki")
+name = "Capelli lunghi"
+part_model = ExtResource("1_rmh0c")
+material = ExtResource("1_8bthe")
+has_primary_color = true
+primary_color = Color(0.34902, 0.247059, 0.223529, 1)
+has_secondary_color = false
+secondary_color = Color(1, 1, 1, 1)

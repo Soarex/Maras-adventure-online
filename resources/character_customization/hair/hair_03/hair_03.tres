@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CharacterPart" load_steps=4 format=3 uid="uid://dj5ihdmnv2my8"]
+
+[ext_resource type="PackedScene" uid="uid://313jdsluauoo" path="res://resources/character_customization/hair/hair_03/hair_03.gltf" id="1_ij8ya"]
+[ext_resource type="Material" uid="uid://c8v45mwck4g81" path="res://resources/character_customization/hair/hair_03/hair_03_material.tres" id="1_rmedr"]
+[ext_resource type="Script" path="res://scripts/character_part.gd" id="2_6mwvm"]
+
+[resource]
+script = ExtResource("2_6mwvm")
+name = "Coda"
+part_model = ExtResource("1_ij8ya")
+material = ExtResource("1_rmedr")
+has_primary_color = true
+primary_color = Color(0.34902, 0.247059, 0.219608, 1)
+has_secondary_color = true
+secondary_color = Color(0.145098, 0.717647, 0.976471, 1)

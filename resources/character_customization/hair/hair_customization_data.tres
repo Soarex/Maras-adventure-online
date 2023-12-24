@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CharacterCustomizationData" load_steps=7 format=3 uid="uid://cyahw45ae1o11"]
+
+[ext_resource type="Resource" uid="uid://dwavrqksj2p42" path="res://resources/character_customization/hair/hair_01/hair_01.tres" id="1_kdk6a"]
+[ext_resource type="Script" path="res://scripts/character_customization_data.gd" id="1_mslbd"]
+[ext_resource type="Resource" uid="uid://vcu3mefa55qs" path="res://resources/character_customization/hair/hair_02/hair_02.tres" id="2_v58cp"]
+[ext_resource type="Resource" uid="uid://dj5ihdmnv2my8" path="res://resources/character_customization/hair/hair_03/hair_03.tres" id="3_jceix"]
+[ext_resource type="Resource" uid="uid://cphuvtnv2cw57" path="res://resources/character_customization/hair/hair_04/hair_04.tres" id="4_64fj0"]
+[ext_resource type="Resource" uid="uid://7wajccx3pq8o" path="res://resources/character_customization/hair/hair_05/hair_05.tres" id="5_kse1b"]
+
+[resource]
+script = ExtResource("1_mslbd")
+part_type = 0
+parts = Array[Resource("res://scripts/character_part.gd")]([ExtResource("1_kdk6a"), ExtResource("2_v58cp"), ExtResource("3_jceix"), ExtResource("4_64fj0"), ExtResource("5_kse1b")])

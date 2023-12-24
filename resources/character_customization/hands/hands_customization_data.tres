@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CharacterCustomizationData" load_steps=3 format=3 uid="uid://dxskiseq6jksr"]
+
+[ext_resource type="Script" path="res://scripts/character_customization_data.gd" id="1_1d3el"]
+[ext_resource type="Resource" uid="uid://na7ouscn6ym6" path="res://resources/character_customization/hands/hand_01/hand_01.tres" id="1_frqlf"]
+
+[resource]
+script = ExtResource("1_1d3el")
+part_type = 3
+parts = Array[Resource("res://scripts/character_part.gd")]([ExtResource("1_frqlf")])

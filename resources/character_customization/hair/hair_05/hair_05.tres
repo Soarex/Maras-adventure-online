@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CharacterPart" load_steps=4 format=3 uid="uid://7wajccx3pq8o"]
+
+[ext_resource type="Material" uid="uid://baxl1m54qnowv" path="res://resources/character_customization/hair/hair_05/hair_05_material.tres" id="1_mx8x4"]
+[ext_resource type="PackedScene" uid="uid://dantplraqhl2c" path="res://resources/character_customization/hair/hair_05/hair_05.gltf" id="1_yoify"]
+[ext_resource type="Script" path="res://scripts/character_part.gd" id="2_5drlm"]
+
+[resource]
+script = ExtResource("2_5drlm")
+name = "Ciuffo"
+part_model = ExtResource("1_yoify")
+material = ExtResource("1_mx8x4")
+has_primary_color = true
+primary_color = Color(0.34902, 0.243137, 0.219608, 1)
+has_secondary_color = false
+secondary_color = Color(1, 1, 1, 1)

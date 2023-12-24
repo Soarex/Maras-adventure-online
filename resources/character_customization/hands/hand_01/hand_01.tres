@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CharacterPart" load_steps=3 format=3 uid="uid://na7ouscn6ym6"]
+
+[ext_resource type="PackedScene" uid="uid://dppq0g48atmab" path="res://resources/character_customization/hands/hand_01/hand_01.gltf" id="1_sgguf"]
+[ext_resource type="Script" path="res://scripts/character_part.gd" id="2_w7506"]
+
+[resource]
+script = ExtResource("2_w7506")
+name = "Mani base"
+part_model = ExtResource("1_sgguf")
+has_primary_color = true
+primary_color = Color(0.160784, 1, 0.188235, 1)
+has_secondary_color = true
+secondary_color = Color(0.0588235, 0.439216, 0.0509804, 1)
